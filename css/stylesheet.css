@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  list-style: none;
+}
+
+header {
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+}
+
+header::before {
+  content: "";
+  background-image: linear-gradient(#444, #666);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header .siteTitle {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: #f66;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+header .titles {
+  color: white;
+  line-height: 1.4;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .titles h1 {
+  font-size: 50px;
+  white-space: nowrap;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+}
+
+header .titles p {
+  font-size: 22px;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.description {
+  line-height: 1.8;
+  padding: 5px 15px;
+  background: #eee;
+  margin: 50px 0 40px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.articles {
+  padding: 0;
+}
+
+.articles section > a .articlesImage {
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.articles .result > a .articlesImage {
+  background-image: url(../img/first.jpg);
+  background-position: center 30%;
+}
+
+.articles section > a {
+  border: 1px solid #888;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+
+.articles section {
+  width: 100%;
+}
+
+@media screen and (min-width: 679px) {
+  .articles section > a:hover {
+    opacity: 0.8;
+    box-shadow: 0 2px 7px 3px #888;
+    transform: translateY(-2px);
+  }
+}
+
+.articles section > a h2 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 30px;
+  padding: 15px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.articles .result > a h2,
+.articles .prepare > a h2 {
+  background: #f66;
+}
+
+.articles section > a p {
+  margin: 0;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  font-size: 18px;
+  background: #fff;
+  padding: 15px;
+  line-height: 1.8;
+}
+
+.articles .prepare > a .articlesImage {
+  background-image: url(../img/second.jpg);
+  background-position: center 50%;
+}
+
+.twoColumns {
+  display: flex;
+}
+
+.articles .html {
+  margin-right: 4%;
+}
+
+.articles .html,
+.articles .css {
+  width: 48%;
+}
+
+.articles .html a,
+.articles .css a {
+  height: 92%;
+}
+
+.articles .html > a h2 {
+  background: #ee955d;
+}
+
+.articles .html > a .articlesImage {
+  background-image: url(../img/third.jpg);
+  background-position: center top;
+}
+
+.articles .css > a h2 {
+  background: #5ad8d8;
+}
+
+.articles .css > a .articlesImage {
+  background-image: url(../img/fourth.jpg);
+  background-position: center;
+}
+
+.articles .js > a h2 {
+  background: #fd3;
+}
+
+.articles .js > a .articlesImage {
+  background-image: url(../img/fifth.jpg);
+  background-position: center;
+}
+
+.articles .terminal > a h2 {
+  background: #845ad8;
+}
+
+.articles .terminal > a .articlesImage {
+  background-image: url(../img/sixth.jpg);
+  background-position: center;
+}
+
+.attention {
+  padding: 20px;
+  background: #ffe6e6;
+  margin-bottom: 50px;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  header .siteTitle {
+    font-size: 16px;
+  }
+  header .titles h1 {
+    font-size: 20px;
+  }
+  header .titles p {
+    font-size: 12px;
+  }
+  main {
+    width: 85%;
+    padding: 0;
+  }
+  .articles section > a .articlesImage {
+    height: 50vw;
+  }
+  .articles section > a h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .articles section > a p {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .twoColumns {
+    display: block;
+  }
+  .articles .html,
+  .articles .css {
+    width: 100%;
+  }
+}
